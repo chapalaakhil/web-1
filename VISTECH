@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Company Name - Innovating Solutions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            color: #f50b0b;
+        }
+
+        header {
+            background-color: #0e7be8;
+            color: white;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(202, 8, 8, 0.2);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav a {
+            color: rgb(247, 237, 133);
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #08db27;
+        }
+
+        .hero {
+            background-image: url(Purple\ minimalist\ Tech\ Company\ Logo_20250220_124353_0000.jpg);
+            background-size: cover;
+            background-position: center;
+            color: rgb(237, 199, 6);
+            text-align: center;
+            padding: 150px 30px;
+        }
+
+        .body1 {
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #3f51b5; /* Dark blue background */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 50px;
+            font-size: small;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 90%; /* Adjust as needed */
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .left-text {
+            flex: 1;
+            text-align: left;
+            padding-right: 20px;
+        }
+
+        .left-text p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .flag-section {
+            display: flex;
+            align-items: center;
+            flex: 2;
+            justify-content: center;
+        }
+
+        .flag-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+            flex-direction: column;
+        }
+
+        .flag-container img {
+            width: 60px; /* Adjust as needed */
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 5px;
+        }
+
+        .flag-label {
+            font-size: 0.8em;
+            text-align: center;
+        }
+
+        .right-text {
+            flex: 1;
+            text-align: right;
+            padding-left:30px;
+        }
+
+        .right-text p {
+            margin: 0;
+            font-size: 1em;
+            padding-right: 20px;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        .section {
+            padding: 60px 30px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #34495e;
+        }
+
+        .section p {
+            max-width: 900px;
+            margin: 20px auto;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .services {
+            background-color: #f9f9f9;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 30px;
+        }
+
+        .service-item {
+            background-color: rgb(249, 247, 224);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-item h3 {
+            margin-bottom: 15px;
+            color: #34495e;
+        }
+
+        .team {
+            background-color: #ecf0f1;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 30px;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .team-member h3 {
+            margin-bottom: 8px;
+            color: #34495e;
+        }
+
+        .team-member p {
+            color: #777;
+        }
+
+        /* Footer Styles from the Image */
+        footer {
+            background-color: #222; /* Dark background */
+            color: #ccc; /* Light text */
+            padding: 40px 20px;
+            text-align: left; /* Align text to the left */
+        }
+
+        .footer-columns {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+        }
+
+        .footer-column {
+            flex: 1 1 200px; /* Distribute space evenly, minimum 200px width */
+            margin-bottom: 20px;
+        }
+
+        .footer-column h3 {
+            color: #fff; /* White headings */
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column li {
+            margin-bottom: 8px;
+        }
+
+        .footer-column a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: #fff;
+        }
+
+        /* Copyright and Additional Info (if needed) */
+        .footer-bottom {
+            margin-top: 40px;
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+
+        .footer-bottom p {
+            margin: 5px 0;
+        }
+
+        .offer-section {
+            background-color: #f0f0f0;
+            padding: 60px 30px;
+            text-align: left;
+        }
+
+        .offer-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #34495e;
+        }
+
+        .offer-columns {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .offer-column {
+            flex: 1 1 300px;
+            margin-bottom: 30px;
+        }
+
+        .offer-column h3 {
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+
+        .offer-column p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .offer-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .offer-list li {
+            margin-bottom: 8px;
+        }
+
+        .offer-list li::before {
+            content: "•";
+            color: #34495e;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">VISTECH Company Inc.</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>VISTECH Company</h1>
+        <p>We empower businesses with cutting-edge solutions tailored to their unique needs. Discover how we can transform your vision into reality.</p>
+    </section>
+
+    <section>
+        <div class="body1">
+            <div class="left-text">
+                <p>To find out how we can empower you, contact us now!</p>
+            </div>
+    
+            <div class="flag-section">
+                <div class="flag-container">
+                    <img src="usa.png" alt="USA Flag">
+                    <span class="flag-label">USA</span>
+                </div>
+                <div class="flag-container">
+                    <img src="canada.png" alt="Canada Flag">
+                    <span class="flag-label">CANADA</span>
+                </div>
+                <div class="flag-container">
+                    <img src="india.png" alt="India Flag">
+                    <span class="flag-label">INDIA</span>
+                </div>
+                <div class="flag-container">
+                    <img src="phil.png" alt="Philippines Flag">
+                    <span class="flag-label">PHILIPPINES</span>
+                </div>
+            </div>
+    
+            <div class="right-text">
+                <p>Our Partner Office Locations: Singapore, Ireland, Poland, & Mexico</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Our Company</h2>
+        <p>Founded in [Year], Your Company Inc. has been at the forefront of [Industry/Field]. We believe in fostering long-term partnerships with our clients by delivering exceptional quality and innovative solutions. Our core values are integrity, innovation, and customer satisfaction.</p>
+        <p>Workforce Solutions to Managed Services, today most organizations need a complete spectrum of intelligent business solutions. They need experienced partners with expertise who can provide value, flexibility and financial predictability.
+            Plus talent needs opportunities to apply their intellect and progress in their career.
+
+            We empower both and are the eco system that connects people, technologies and opportunities with intelligence.</p>
+    </section>
+
+    <section class="offer-section">
+        <h2>What We Offer</h2>
+        <div class="offer-columns">
+            <div class="offer-column">
+                <h3>Managed Services and Project Delivery</h3>
+                <p>Artech Solutions leverages the larger talent-sourcing engine to build optimized delivery teams to achieve exceptional business results for our customers. We provide you with a combination of people, processes, tools and technologies that can help you maximize productivity, improve operations, facilitate agility and scale, reshape spending, and deliver innovation.</p>
+                <ul class="offer-list">
+                    <li>Application Services</li>
+                    <li>Cloud and Infrastructure</li>
+                    <li>Business Resiliency</li>
+                    <li>Digital Experience</li>
+                </ul>
+            </div>
+            <div class="offer-column">
+                <h3>Workforce Solutions</h3>
+                <p>Our Workforce Solutions Teams don't just deliver staffing solutions they provide business solutions. Our understanding of client's needs, unique talent supply chain, high-performing teams, and flexible engagement models help us empower businesses by delivering human intellect that can make a difference to an organization.</p>
+                <ul class="offer-list">
+                    <li>Contingent Staffing</li>
+                    <li>Project Staffing</li>
+                    <li>RPO-Projects and Programs</li>
+                    <li>Master Vendor</li>
+                    <li>Direct Hire</li>
+                    <li>Payroll and Transition Services</li>
+                </ul>
+            </div>
+            <div class="offer-column">
+                <h3>Diversity and Inclusion Programs</h3>
+                <p>At Artech. Diversity is in our DNA and is an organizing principle in how we do business. As a certified minority and women-owned business, we are at the forefront of diverse hiring in the United States for 3 decades.</p>
+                <p>We are committed to inclusive hiring practices Internally, with our suppliers, and for our clients and outperform the national average by leaps and bounds.</p>
+                <p>By partnering with Artech, clients benefit from the workforce representation we have already attained.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section services">
+        <h2>Our Comprehensive Services</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <h3>Web Development</h3>
+                <p>Custom web solutions designed to enhance your online presence and drive business growth.</p>
+            </div>
+            <div class="service-item">
+                <h3>Mobile App Development</h3>
+                <p>Innovative mobile applications for iOS and Android, tailored to meet your business needs.</p>
+            </div>
+            <div class="service-item">
+                <h3>Digital Marketing</h3>
+                <p>Strategic digital marketing campaigns to boost your brand visibility and customer engagement.</p>
+            </div>
+            <div class="service-item">
+                <h3>Cloud Solutions</h3>
+                <p>Scalable and secure cloud services to optimize your business operations and reduce costs.</p>
+            </div>
+            <div class="service-item">
+                <h3>UI/UX Design</h3>
+                <p>User-centric design solutions that create intuitive and engaging digital experiences.</p>
+            </div>
+            <div class="service-item">
+                <h3>Consulting Services</h3>
+                <p>Expert consulting to help you navigate complex business challenges and achieve your strategic goals.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="section team">
+        <h2>Meet Our Expert Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="ceo 3.png" alt="John Doe">
+                <h3>John Doe</h3>
+                <p>Chief Executive Officer</p>
+            </div>
+            <div class="team-member">
+                <img src="ceo 1.png" alt="Jane Smith">
+                <h3>Jane Smith</h3>
+                <p>Chief Technology Officer</p>
+            </div>
+            <div class="team-member">
+                <img src="ceo 2.png" alt="Alice Johnson">
+                <h3>Alice Johnson</h3>
+                <p>Marketing Manager</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Email: info@yourcompany.com | Phone: +1 123 456 7890</p>
+    </section>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>OUR SOLUTIONS</h3>
+                <ul>
+                    <li><a href="#">Contingent Staffing</a></li>
+                    <li><a href="#">Recruitment Process Outsourcing (RPO)</a></li>
+                    <li><a href="#">Direct Hire</a></li>
+                    <li><a href="#">Master Vendor Program</a></li>
+                    <li><a href="#">Payroll & Transition Services</a></li>
+                    <li><a href="#">Managed Services and Project Delivery</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>DIVERSITY & INCLUSION</h3>
+                <h3>CAREERS</h3>
+                <ul>
+                    <li><a href="#">Corporate Jobs</a></li>
+                    <li><a href="#">Consultant Jobs</a></li>
+                </ul>
+                <h3>COMMUNITY FIRST INITIATIVES</h3>
+            </div>
+            <div class="footer-column">
+                <h3>RESOURCES</h3>
+                <ul>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">Notices</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Web Stories</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>ABOUT US</h3>
+                <ul>
+                    <li><a href="#">Artech Advantage</a></li>
+                    <li><a href="#">Great Place to Work</a></li>
+                    <li><a href="#">Awards</a></li>
+                    <li><a href="#">Certifications & Accolades</a></li>
+                </ul>
+                <h3>CONTACT US</h3>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p> 
+        </div>
+    </footer>
+
+</body>
+</html>
